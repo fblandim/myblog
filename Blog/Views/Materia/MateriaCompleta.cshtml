@@ -1,0 +1,56 @@
+﻿@model Blog.Models.Materia
+@using Microsoft.AspNetCore.Identity
+@using Blog.Areas.Identity.Data
+@inject SignInManager<AppIdentityUser> SignInManager
+@inject UserManager<AppIdentityUser> UserManager
+
+@{
+    ViewData["Title"] = "MateriaCompleta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row">
+
+        <!-- Post Content Column -->
+        <div class="col-lg-8">
+
+            <!-- Title -->
+            <h1 class="mt-4"> @Html.DisplayFor(model => model.Titulo)</h1>
+
+            <!-- Author -->
+            <p class="lead">
+                by
+                <a href="#">Start Bootstrap</a>
+            </p>
+
+            <hr>
+
+            <!-- Date/Time -->
+            <p>Posted on January 1, 2019 at 12:00 PM</p>
+
+            <hr>
+
+            <!-- Preview Image -->
+            <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+
+            <hr>
+
+            <!-- Post Content -->
+            <p>@Html.Raw(Html.DisplayTextFor(model => model.Texto))</p>
+
+            <hr>
+            <div>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <a asp-action="Edit" asp-route-id="@Model.MateriaID">Edit</a>
+                }
+                <a asp-action="Index">Back to List</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
