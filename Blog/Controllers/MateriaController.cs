@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Blog.Data;
 using Blog.Data.DAL;
 using Blog.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -40,12 +42,16 @@ namespace Blog.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public async Task<IActionResult> Create([Bind("Titulo, Texto")] Materia materia)
+        public async Task<IActionResult> Create([Bind("Titulo, Texto")] Materia materia, IFormFile foto)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
+                    var stream = new MemoryStream();
+                    await foto.CopyToAsync(stream);
+                    materia.Foto = stream.ToArray();
+                    materia.FotoMimeType = foto.ContentType;
                     await materiaDAL.GravarMateria(materia);
                     return RedirectToAction(nameof(Index));
                 }
@@ -136,6 +142,17 @@ namespace Blog.Controllers
                 return NotFound();
             }
             return View(materia);
+        }
+
+        public async Task<FileContentResult> GetFoto(long id)
+        {
+            Materia materia = await materiaDAL.ObterMateriaPorId(id);
+            if (materia != null)
+            {
+                return File(materia.Foto, materia.FotoMimeType);
+            }
+
+            return null;
         }
     }
 }

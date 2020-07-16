@@ -24,7 +24,7 @@
 
 
     <div class="card mb-4">
-        <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+        <img class="card-img-top" src="@Url.Action("GetFoto", "Materia", new { id = item.MateriaID})" alt="Card image cap">
         <div class="card-body">
             <h2 class="card-title">@Html.DisplayFor(modelItem => item.Titulo)</h2>
             <p class="card-text">@Html.Raw(Html.DisplayTextFor(modelItem => item.Texto))</p>
