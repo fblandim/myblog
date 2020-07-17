@@ -19,26 +19,29 @@
 }
 
 
-@foreach (var item in Model)
-{
+<div class="container">
+
+    @foreach (var item in Model)
+    {
 
 
-    <div class="card mb-4">
-        <img class="card-img-top" src="@Url.Action("GetFoto", "Materia", new { id = item.MateriaID})" alt="Card image cap">
-        <div class="card-body">
-            <h2 class="card-title">@Html.DisplayFor(modelItem => item.Titulo)</h2>
-            <p class="card-text">@Html.Raw(Html.DisplayTextFor(modelItem => item.Texto))</p>
-            <a asp-action="MateriaCompleta" asp-route-id="@item.MateriaID" class="btn btn-primary">Leia Mais</a>
-            @if (SignInManager.IsSignedIn(User))
-            {
-                <a asp-action="Edit" asp-route-id="@item.MateriaID">Editar</a>
-                <a asp-action="Delete" asp-route-id="@item.MateriaID">Deletar</a>
-            }
+        <div class="card mb-4 w-75 p-3">
+            <img src="@Url.Action("GetFoto", "Materia", new { id = item.MateriaID})" class="d-block card-img-top imagem-materia" alt="Card image cap">
+            <div class="card-body">
+                <h2 class="card-title">@Html.DisplayFor(modelItem => item.Titulo)</h2>
+                <p class="card-text">@Html.Raw(Html.DisplayTextFor(modelItem => item.Texto))</p>
+                <a asp-action="MateriaCompleta" asp-route-id="@item.MateriaID" class="btn btn-primary">Leia Mais</a>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <a asp-action="Edit" asp-route-id="@item.MateriaID">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@item.MateriaID">Deletar</a>
+                }
+            </div>
+            <div class="card-footer text-muted">
+                Posted on January 1, 2020 by
+                <a href="#">Start Bootstrap</a>
+            </div>
         </div>
-        <div class="card-footer text-muted">
-            Posted on January 1, 2020 by
-            <a href="#">Start Bootstrap</a>
-        </div>
+    }
+
     </div>
-}
-
