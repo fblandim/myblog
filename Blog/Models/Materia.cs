@@ -11,6 +11,7 @@ namespace Blog.Models
     {
         public long? MateriaID { get; set; }
         public string Titulo { get; set; }
+        public string Resumo { get; set; }
         public string Texto { get; set; }
         public string FotoMimeType { get; set; }
         public byte[] Foto { get; set; }

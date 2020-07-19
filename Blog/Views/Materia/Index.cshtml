@@ -29,7 +29,8 @@
             <img src="@Url.Action("GetFoto", "Materia", new { id = item.MateriaID})" class="d-block card-img-top imagem-materia" alt="Card image cap">
             <div class="card-body">
                 <h2 class="card-title">@Html.DisplayFor(modelItem => item.Titulo)</h2>
-                <p class="card-text">@Html.Raw(Html.DisplayTextFor(modelItem => item.Texto))</p>
+                <!-- <p class="card-text">@Html.Raw(Html.DisplayTextFor(modelItem => item.Resumo))</p> -->
+                <p class="card-text">@Html.DisplayFor(modelItem => item.Resumo)</p>
                 <a asp-action="MateriaCompleta" asp-route-id="@item.MateriaID" class="btn btn-primary">Leia Mais</a>
                 @if (SignInManager.IsSignedIn(User))
                 {

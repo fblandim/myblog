@@ -42,7 +42,7 @@ namespace Blog.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public async Task<IActionResult> Create([Bind("Titulo, Texto")] Materia materia, IFormFile foto)
+        public async Task<IActionResult> Create([Bind("Titulo, Resumo, Texto")] Materia materia, IFormFile foto)
         {
             try
             {
@@ -78,7 +78,7 @@ namespace Blog.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public async Task<IActionResult> Edit(long? id, [Bind("MateriaID, Titulo, Texto")]Materia materia)
+        public async Task<IActionResult> Edit(long? id, [Bind("MateriaID, Titulo, Resumo, Texto")]Materia materia, IFormFile foto, string chkRemoverFoto)
         {
             if(id != materia.MateriaID)
             {
@@ -86,8 +86,22 @@ namespace Blog.Controllers
             }
             if (ModelState.IsValid)
             {
+                var stream = new MemoryStream();
+                if (chkRemoverFoto != null)
+                {
+                    materia.Foto = null;
+                }
+                else
+                {
+                    await foto.CopyToAsync(stream);
+                    materia.Foto = stream.ToArray();
+                    materia.FotoMimeType = foto.ContentType;
+                }
+
+
                 try
                 {
+                    
                     await materiaDAL.GravarMateria(materia);
                 }
                 catch (DbUpdateConcurrencyException)
