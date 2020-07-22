@@ -9,52 +9,17 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+
+
+
 
 @if (SignInManager.IsSignedIn(User))
 {
     <p>
-        <a asp-action="Create">Create New</a>
+        <a asp-action="Create" type="button" class="btn btn-primary">Criar Nova Matéria</a>
     </p>
 }
 
-
-<div class="container">
-
-
-
-
-    @foreach (var item in Model)
-    {
-
-
-        <div class="card mb-4">
-            <img class="d-block card-img-top imagem-materia" src="@Url.Action("GetFoto", "Materia", new { id = item.MateriaID})" alt="Card image cap">
-            <div class="card-body">
-                <h2 class="card-title">@Html.DisplayFor(modelItem => item.Titulo)</h2>
-
-                        <!-- <p class="card-text">@Html.Raw(Html.DisplayTextFor(modelItem => item.Resumo))</p> -->
-                <p class="card-text">@Html.DisplayFor(modelItem => item.Resumo)</p>
-                <a asp-action="MateriaCompleta" asp-route-id="@item.MateriaID" class="btn btn-primary">Leia Mais</a>
-                @if (SignInManager.IsSignedIn(User))
-                {
-                    <a asp-action="Edit" asp-route-id="@item.MateriaID">Editar</a>
-                    <a asp-action="Delete" asp-route-id="@item.MateriaID">Deletar</a>
-                }
-            </div>
-            <div class="card-footer text-muted">
-                Posted on January 1, 2020 by
-                <a href="#">Start Bootstrap</a>
-            </div>
-        </div>
-    }
-
-
-
-</div>
-
-
-<!---------------------------------------------------------------------------------------------------------------->
 
 
 <body>
@@ -73,47 +38,30 @@
                     <small>Secondary Text</small>
                 </h1>
 
-                <!-- Blog Post -->
-                <div class="card mb-4">
-                    <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
-                    <div class="card-body">
-                        <h2 class="card-title">Post Title</h2>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-                        <a href="#" class="btn btn-primary">Read More &rarr;</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                        Posted on January 1, 2020 by
-                        <a href="#">Start Bootstrap</a>
-                    </div>
-                </div>
 
-                <!-- Blog Post -->
-                <div class="card mb-4">
-                    <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
-                    <div class="card-body">
-                        <h2 class="card-title">Post Title</h2>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-                        <a href="#" class="btn btn-primary">Read More &rarr;</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                        Posted on January 1, 2020 by
-                        <a href="#">Start Bootstrap</a>
-                    </div>
-                </div>
+                @foreach (var item in Model)
+                {
 
-                <!-- Blog Post -->
-                <div class="card mb-4">
-                    <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
-                    <div class="card-body">
-                        <h2 class="card-title">Post Title</h2>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-                        <a href="#" class="btn btn-primary">Read More &rarr;</a>
+                    <!-- Blog Post -->
+                    <div class="card mb-4">
+                        <img class="card-img-top imagem-materia" src="@Url.Action("GetFoto", "Materia", new { id = item.MateriaID })" alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-title">@Html.DisplayFor(modelItem => item.Titulo)</h2>
+                            <p class="card-text">@Html.DisplayFor(modelItem => item.Resumo)</p>
+                            <a asp-action="MateriaCompleta" asp-route-id="@item.MateriaID" class="btn btn-primary">Leia Mais</a>
+                            @if (SignInManager.IsSignedIn(User))
+                            {
+                                <a asp-action="Edit" asp-route-id="@item.MateriaID">Editar</a>
+                                <a asp-action="Delete" asp-route-id="@item.MateriaID">Deletar</a>
+                            }
+                        </div>
+                        <div class="card-footer text-muted">
+                            Posted on January 1, 2020 by
+                            <a href="#">Start Bootstrap</a>
+                        </div>
                     </div>
-                    <div class="card-footer text-muted">
-                        Posted on January 1, 2020 by
-                        <a href="#">Start Bootstrap</a>
-                    </div>
-                </div>
+
+                }
 
                 <!-- Pagination -->
                 <ul class="pagination justify-content-center mb-4">
@@ -130,18 +78,28 @@
             <!-- Sidebar Widgets Column -->
             <div class="col-md-4">
 
+              
+
                 <!-- Search Widget -->
+                @using (Html.BeginForm("Index", "Materia", FormMethod.Get))
+                {
+                    @Html.TextBox("Pesquisa")
+                    <input type="submit" value="Pesquisar" />
+                }
                 <div class="card my-4">
                     <h5 class="card-header">Search</h5>
                     <div class="card-body">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search for...">
                             <span class="input-group-append">
-                                <button class="btn btn-secondary" type="button">Go!</button>
+
+                                <button class="btn btn-secondary" type="submit" value="pesquisar">Go!</button>
                             </span>
                         </div>
                     </div>
                 </div>
+
+
 
                 <!-- Categories Widget -->
                 <div class="card my-4">

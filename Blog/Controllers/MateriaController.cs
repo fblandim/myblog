@@ -27,10 +27,16 @@ namespace Blog.Controllers
         }
               
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string Pesquisa)
         {
-            
-            return View(await materiaDAL.ObterMateriaClassificadaPorId().ToListAsync());
+            var materiasPesquisa = from m in _context.Materias select m;
+
+            if (!String.IsNullOrEmpty(Pesquisa))
+            {
+                materiasPesquisa = materiasPesquisa.Where(s => s.Titulo.Contains(Pesquisa));
+            }
+
+            return View(await materiasPesquisa.ToListAsync());
         }
 
         [Authorize]

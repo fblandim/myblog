@@ -30,7 +30,6 @@ C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\ne
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Blog.pdb
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Blog.genruntimeconfig.cache
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Blog.csproj.CopyComplete
-C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Blog.csproj.CoreCompileInputs.cache
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\ExternalLogin.cshtml.g.cs
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
@@ -47,4 +46,5 @@ C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\ne
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Razor\Views\Materia\Edit.cshtml.g.cs
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Razor\Views\Materia\Delete.cshtml.g.cs
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Razor\Views\Materia\Create.cshtml.g.cs
+C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Blog.csproj.CoreCompileInputs.cache
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Blog.csprojAssemblyReference.cache
