@@ -78,27 +78,25 @@
             <!-- Sidebar Widgets Column -->
             <div class="col-md-4">
 
-              
+
 
                 <!-- Search Widget -->
                 @using (Html.BeginForm("Index", "Materia", FormMethod.Get))
                 {
-                    @Html.TextBox("Pesquisa")
-                    <input type="submit" value="Pesquisar" />
-                }
-                <div class="card my-4">
-                    <h5 class="card-header">Search</h5>
-                    <div class="card-body">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search for...">
-                            <span class="input-group-append">
+                    <div class="card my-4">
+                        <h5 class="card-header">Search</h5>
+                        <div class="card-body">
+                            <div class="input-group">
 
-                                <button class="btn btn-secondary" type="submit" value="pesquisar">Go!</button>
-                            </span>
+                                <input type="text" id="Pesquisa" name="Pesquisa" class="form-control" placeholder="Search for...">
+                                <span class="input-group-append">
+                                    <button class="btn btn-secondary" type="submit" value="Pesquisar">Go!</button>
+                                </span>
+
+                            </div>
                         </div>
                     </div>
-                </div>
-
+                }
 
 
                 <!-- Categories Widget -->

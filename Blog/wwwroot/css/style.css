@@ -1,8 +1,6 @@
 
 .imagem-materia {
-    width: 750px;
-    height: 300px;
     object-fit: cover;
     object-position: 0 50%;
-    
+    height: 300px;
 }

@@ -33,7 +33,7 @@ namespace Blog.Controllers
 
             if (!String.IsNullOrEmpty(Pesquisa))
             {
-                materiasPesquisa = materiasPesquisa.Where(s => s.Titulo.Contains(Pesquisa));
+                materiasPesquisa = materiasPesquisa.Where(s => s.Texto.Contains(Pesquisa));
             }
 
             return View(await materiasPesquisa.ToListAsync());
