@@ -13,10 +13,18 @@ namespace Blog.Models
         public string Titulo { get; set; }
         public string Resumo { get; set; }
         public string Texto { get; set; }
+        private DateTime? dtCreated;
+        public DateTime? DtCreated {
+            get { return dtCreated ?? DateTime.Now; }
+            set { dtCreated = value; }
+        }
         public string FotoMimeType { get; set; }
         public byte[] Foto { get; set; }
         [NotMapped]
         public IFormFile formFile { get; set; }
+
+
+      
 
     }
 }

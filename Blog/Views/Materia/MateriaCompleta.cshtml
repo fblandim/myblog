@@ -29,12 +29,12 @@
             <hr>
 
             <!-- Date/Time -->
-            <p>Posted on January 1, 2019 at 12:00 PM</p>
+            <p>Posted on @Html.DisplayFor(Model => Model.DtCreated)</p>
 
             <hr>
 
             <!-- Preview Image -->
-            <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+            <img class="card-img-top imagem-materia" src="@Url.Action("GetFoto", "Materia", new { id = Model.MateriaID })" alt="">
 
             <hr>
 
