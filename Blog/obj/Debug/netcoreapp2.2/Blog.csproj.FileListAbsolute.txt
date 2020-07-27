@@ -47,4 +47,3 @@ C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\ne
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Razor\Views\Materia\Delete.cshtml.g.cs
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Razor\Views\Materia\Create.cshtml.g.cs
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Blog.csproj.CoreCompileInputs.cache
-C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Blog.csprojAssemblyReference.cache

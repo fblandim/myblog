@@ -15,7 +15,7 @@
     <div class="row">
 
         <!-- Post Content Column -->
-        <div class="col-lg-8">
+        <div class="col-lg-8 text-justify">
 
             <!-- Title -->
             <h1 class="mt-4"> @Html.DisplayFor(model => model.Titulo)</h1>
@@ -23,13 +23,13 @@
             <!-- Author -->
             <p class="lead">
                 by
-                <a href="#">Start Bootstrap</a>
+                <a>@Html.DisplayFor(model => model.Autor)</a>
             </p>
 
             <hr>
 
             <!-- Date/Time -->
-            <p>Posted on @Html.DisplayFor(Model => Model.DtCreated)</p>
+            <p>Postado em @Html.DisplayFor(Model => Model.DtCreated)</p>
 
             <hr>
 
@@ -45,9 +45,9 @@
             <div>
                 @if (SignInManager.IsSignedIn(User))
                 {
-                    <a asp-action="Edit" asp-route-id="@Model.MateriaID">Edit</a>
+                    <a asp-action="Edit" asp-route-id="@Model.MateriaID">Editar</a>
                 }
-                <a asp-action="Index">Back to List</a>
+                <a asp-action="Index">Voltar</a>
             </div>
         </div>
     </div>

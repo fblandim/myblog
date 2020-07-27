@@ -48,7 +48,7 @@ namespace Blog.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public async Task<IActionResult> Create([Bind("Titulo, Resumo, Texto")] Materia materia, IFormFile foto)
+        public async Task<IActionResult> Create([Bind("Titulo, Autor, Resumo, Texto")] Materia materia, IFormFile foto)
         {
             try
             {
@@ -84,7 +84,7 @@ namespace Blog.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public async Task<IActionResult> Edit(long? id, [Bind("MateriaID, Titulo, Resumo, Texto")]Materia materia, IFormFile foto, string chkRemoverFoto)
+        public async Task<IActionResult> Edit(long? id, [Bind("MateriaID, Titulo, Autor, Resumo, Texto")]Materia materia, IFormFile foto, string chkRemoverFoto)
         {
             if(id != materia.MateriaID)
             {

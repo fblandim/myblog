@@ -34,8 +34,7 @@
             <div class="col-md-8">
 
                 <h1 class="my-4">
-                    Page Heading
-                    <small>Secondary Text</small>
+                    Publicações
                 </h1>
 
 
@@ -43,7 +42,7 @@
                 {
 
                     <!-- Blog Post -->
-                    <div class="card mb-4">
+                    <div class="card mb-4 text-justify">
                         <img class="card-img-top imagem-materia" src="@Url.Action("GetFoto", "Materia", new { id = item.MateriaID })" alt="Card image cap">
                         <div class="card-body">
                             <h2 class="card-title">@Html.DisplayFor(modelItem => item.Titulo)</h2>
@@ -56,8 +55,8 @@
                             }
                         </div>
                         <div class="card-footer text-muted">
-                            Posted on January 1, 2020 by
-                            <a href="#">Start Bootstrap</a>
+                            Postado em  @Html.DisplayFor(modelItem => item.DtCreated) por
+                            <a>@Html.DisplayFor(modelItem => item.Autor)</a>
                         </div>
                     </div>
 
