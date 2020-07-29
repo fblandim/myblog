@@ -1,16 +1,24 @@
-﻿@model IEnumerable<Blog.Models.Materia>
+﻿@using X.PagedList.Mvc.Core
+@using X.PagedList.Mvc.Bootstrap4
+
+@model X.PagedList.IPagedList<Blog.Models.Materia>
+
+
 @using Microsoft.AspNetCore.Identity
 @using Blog.Areas.Identity.Data
 @inject SignInManager<AppIdentityUser> SignInManager
 @inject UserManager<AppIdentityUser> UserManager
+
+
+
+
 
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
-
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
 
 
 @if (SignInManager.IsSignedIn(User))
@@ -19,7 +27,6 @@
         <a asp-action="Create" type="button" class="btn btn-primary">Criar Nova Matéria</a>
     </p>
 }
-
 
 
 <body>
@@ -62,15 +69,18 @@
 
                 }
 
+
+
+
                 <!-- Pagination -->
+
                 <ul class="pagination justify-content-center mb-4">
-                    <li class="page-item">
-                        <a class="page-link" href="#">&larr; Older</a>
-                    </li>
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#">Newer &rarr;</a>
-                    </li>
+                    @Html.PagedListPager(Model, pagina => Url.Action("Index", new { pagina }), Bootstrap4PagedListRenderOptions.ClassicPlusFirstAndLast)
+
                 </ul>
+
+
+
 
             </div>
 
@@ -146,9 +156,23 @@
         </div>
         <!-- /.row -->
 
+
+
+
+
+
+
+
+
+
     </div>
 
 
 </body>
+
+
+
+
+
 
 

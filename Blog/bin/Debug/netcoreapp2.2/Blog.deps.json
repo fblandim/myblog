@@ -31,7 +31,10 @@
           "Microsoft.EntityFrameworkCore.Sqlite": "2.2.0",
           "Microsoft.jQuery.Unobtrusive.Ajax": "3.2.6",
           "Microsoft.NETCore.App": "2.2.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.4"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.4",
+          "X.PagedList": "7.2.0",
+          "X.PagedList.Mvc.Bootstrap4": "1.0.0",
+          "X.PagedList.Mvc.Core": "7.2.0"
         },
         "runtime": {
           "Blog.dll": {}
@@ -505,6 +508,66 @@
           "System.Runtime.Extensions": "4.3.0",
           "System.Threading": "4.3.0",
           "System.Threading.Tasks": "4.3.0"
+        }
+      },
+      "System.Linq.Queryable/4.3.0": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Linq.Expressions": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "X.PagedList/7.2.0": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "System.Linq.Expressions": "4.3.0",
+          "System.Linq.Queryable": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.2/X.PagedList.dll": {
+            "assemblyVersion": "7.2.0.0",
+            "fileVersion": "7.2.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.2/X.PagedList.dll": {}
+        }
+      },
+      "X.PagedList.Mvc.Bootstrap4/1.0.0": {
+        "runtime": {
+          "lib/net452/X.PagedList.Mvc.Bootstrap4.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/net452/X.PagedList.Mvc.Bootstrap4.dll": {}
+        }
+      },
+      "X.PagedList.Mvc.Core/7.2.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0",
+          "X.PagedList": "7.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/X.PagedList.Mvc.Common.dll": {
+            "assemblyVersion": "7.2.0.0",
+            "fileVersion": "7.2.0.0"
+          },
+          "lib/netstandard2.0/X.PagedList.Mvc.Core.dll": {
+            "assemblyVersion": "7.2.0.0",
+            "fileVersion": "7.2.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/X.PagedList.Mvc.Common.dll": {},
+          "lib/netstandard2.0/X.PagedList.Mvc.Core.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -2677,7 +2740,7 @@
           "System.Diagnostics.Debug": "4.3.0",
           "System.Linq": "4.3.0",
           "System.Linq.Expressions": "4.3.0",
-          "System.Linq.Queryable": "4.0.1",
+          "System.Linq.Queryable": "4.3.0",
           "System.ObjectModel": "4.3.0",
           "System.Reflection": "4.3.0",
           "System.Reflection.Extensions": "4.3.0",
@@ -3069,19 +3132,6 @@
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
           "System.Threading": "4.3.0"
-        },
-        "compileOnly": true
-      },
-      "System.Linq.Queryable/4.0.1": {
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Diagnostics.Debug": "4.3.0",
-          "System.Linq": "4.3.0",
-          "System.Linq.Expressions": "4.3.0",
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Extensions": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0"
         },
         "compileOnly": true
       },
@@ -3911,6 +3961,34 @@
       "sha512": "sha512-BkYWU6QMQ7cP+xavSIttoqt5bjBl+zwGVy7GZQUvGMfGOzz6kaADYxIEKeAr1+RCfeFUf4qjHpU2SiSuW4EI0g==",
       "path": "system.linq.parallel/4.3.0",
       "hashPath": "system.linq.parallel.4.3.0.nupkg.sha512"
+    },
+    "System.Linq.Queryable/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-In1Bmmvl/j52yPu3xgakQSI0YIckPUr870w4K5+Lak3JCCa8hl+my65lABOuKfYs4ugmZy25ScFerC4nz8+b6g==",
+      "path": "system.linq.queryable/4.3.0",
+      "hashPath": "system.linq.queryable.4.3.0.nupkg.sha512"
+    },
+    "X.PagedList/7.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-m0ogHE+G3xKGjCjukDshvKqYtgCaDfqmZsyjD0HujL4/Yf2bEu4PYJ9oJ+rSt3CHrFuFuOWIe1VC3j78EdKBlA==",
+      "path": "x.pagedlist/7.2.0",
+      "hashPath": "x.pagedlist.7.2.0.nupkg.sha512"
+    },
+    "X.PagedList.Mvc.Bootstrap4/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ruNyy3yt5jki9XXvx8ZDQNhStjcHYWxAnMIEndDiAN3ct6E+bxah0Giovui9Vig6YFoo+2G2ZChOi/OCGma5tQ==",
+      "path": "x.pagedlist.mvc.bootstrap4/1.0.0",
+      "hashPath": "x.pagedlist.mvc.bootstrap4.1.0.0.nupkg.sha512"
+    },
+    "X.PagedList.Mvc.Core/7.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-O8zcK5dDhIOMFSKylbqS9skHu02UFz5eQOOMuZEx8abpmsE0575MU0qdPSA3dUOVkcdpEEIZIMrGy9CJ0sn43g==",
+      "path": "x.pagedlist.mvc.core/7.2.0",
+      "hashPath": "x.pagedlist.mvc.core.7.2.0.nupkg.sha512"
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",
@@ -5486,13 +5564,6 @@
       "sha512": "sha512-/QJWM/DVWi5HsYcFjwRhSHvLD47I9qc3JK9rXycDk5YWxwHWX+Oejn+cqqG8T9rxdc7da6MM7bhWz9me8gQsog==",
       "path": "system.linq.expressions/4.3.0",
       "hashPath": "system.linq.expressions.4.3.0.nupkg.sha512"
-    },
-    "System.Linq.Queryable/4.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Yn/WfYe9RoRfmSLvUt2JerP0BTGGykCZkQPgojaxgzF2N0oPo+/AhB8TXOpdCcNlrG3VRtsamtK2uzsp3cqRVw==",
-      "path": "system.linq.queryable/4.0.1",
-      "hashPath": "system.linq.queryable.4.0.1.nupkg.sha512"
     },
     "System.Memory/4.5.1": {
       "type": "package",

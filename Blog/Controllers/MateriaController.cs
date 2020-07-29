@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using X.PagedList;
+
 
 namespace Blog.Controllers
 {
@@ -27,7 +29,7 @@ namespace Blog.Controllers
         }
               
 
-        public async Task<IActionResult> Index(string Pesquisa)
+        public async Task<IActionResult> Index(string Pesquisa, int Pagina = 1)
         {
             var materiasPesquisa = from m in _context.Materias select m;
 
@@ -36,7 +38,7 @@ namespace Blog.Controllers
                 materiasPesquisa = materiasPesquisa.Where(s => s.Texto.Contains(Pesquisa));
             }
 
-            return View(await materiasPesquisa.ToListAsync());
+            return View(await materiasPesquisa.ToPagedListAsync(Pagina, 2));
         }
 
         [Authorize]
