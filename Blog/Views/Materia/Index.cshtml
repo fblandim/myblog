@@ -1,6 +1,5 @@
 ﻿@using X.PagedList.Mvc.Core
 @using X.PagedList.Mvc.Bootstrap4
-
 @model X.PagedList.IPagedList<Blog.Models.Materia>
 
 
@@ -93,13 +92,13 @@
                 @using (Html.BeginForm("Index", "Materia", FormMethod.Get))
                 {
                     <div class="card my-4">
-                        <h5 class="card-header">Search</h5>
+                        <h5 class="card-header">Pesquisar</h5>
                         <div class="card-body">
                             <div class="input-group">
 
-                                <input type="text" id="Pesquisa" name="Pesquisa" class="form-control" placeholder="Search for...">
+                                <input type="text" id="Pesquisa" name="Pesquisa" class="form-control" placeholder="Pesquisar por...">
                                 <span class="input-group-append">
-                                    <button class="btn btn-secondary" type="submit" value="Pesquisar">Go!</button>
+                                    <button class="btn btn-secondary" type="submit" value="Pesquisar">Pesquisar</button>
                                 </span>
 
                             </div>

@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+
 using Blog.Data;
 using Blog.Data.DAL;
 using Blog.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -19,12 +21,14 @@ namespace Blog.Controllers
     {
         private readonly BlogContext _context;
         private readonly MateriaDAL materiaDAL;
+        private IHostingEnvironment hostingEnvironment;
         
 
-        public MateriaController(BlogContext context)
+        public MateriaController(BlogContext context, IHostingEnvironment hostingEnvironment)
         {
             this._context = context;
             materiaDAL = new MateriaDAL(context);
+            this.hostingEnvironment = hostingEnvironment;
           
         }
               
@@ -175,6 +179,20 @@ namespace Blog.Controllers
             }
 
             return null;
+        }
+
+
+        [Route("upload_ckeditor")]
+        [HttpPost]
+        public IActionResult UploadCKEditor(IFormFile upload)
+        {
+
+            var fileName = DateTime.Now.ToString("yyyyMMddHHmmss") + upload.FileName;
+            var path = Path.Combine(Directory.GetCurrentDirectory(), hostingEnvironment.WebRootPath, "uploads", fileName);
+            var stream = new FileStream(path, FileMode.Create);
+            upload.CopyToAsync(stream);
+            return new JsonResult(new { path = "/uploads/" + fileName });
+
         }
     }
 }

@@ -7,7 +7,8 @@
 
 <h1>Criar Nova Matéria</h1>
 
-<script src="https://cdn.ckeditor.com/ckeditor5/20.0.0/classic/ckeditor.js"></script>
+
+
 
 
 <hr />
@@ -31,16 +32,16 @@
                 <span asp-validation-for="Resumo" class="text-danger"></span>
             </div>
             <div class="w-100">
-                @Html.TextAreaFor(model => model.Texto, new { @id = "editor" })
+                @Html.TextAreaFor(model => model.Texto, new { @id = "summernote" })
             </div>
 
             <script>
-                ClassicEditor
-                    .create(document.querySelector('#editor'))
+                $('#summernote').summernote({
+                    placeholder: 'Hello Bootstrap 4',
+                    tabsize: 2,
+                    height: 100
+                });
 
-                    .catch(error => {
-                        console.error(error);
-                    });
             </script>
             <div class="form-group">
                 <label class="control-label">Foto</label>
