@@ -5,6 +5,13 @@
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="wwwroot\uploads\**" />
+    <Content Remove="wwwroot\uploads\**" />
+    <EmbeddedResource Remove="wwwroot\uploads\**" />
+    <None Remove="wwwroot\uploads\**" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="Jquery" Version="3.5.1" />
@@ -17,11 +24,6 @@
     <PackageReference Include="X.PagedList" Version="7.2.0" />
     <PackageReference Include="X.PagedList.Mvc.Bootstrap4" Version="1.0.0" />
     <PackageReference Include="X.PagedList.Mvc.Core" Version="7.2.0" />
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <Folder Include="wwwroot\uploads\" />
   </ItemGroup>
 
 </Project>

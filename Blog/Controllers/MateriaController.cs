@@ -182,17 +182,6 @@ namespace Blog.Controllers
         }
 
 
-        [Route("upload_ckeditor")]
-        [HttpPost]
-        public IActionResult UploadCKEditor(IFormFile upload)
-        {
-
-            var fileName = DateTime.Now.ToString("yyyyMMddHHmmss") + upload.FileName;
-            var path = Path.Combine(Directory.GetCurrentDirectory(), hostingEnvironment.WebRootPath, "uploads", fileName);
-            var stream = new FileStream(path, FileMode.Create);
-            upload.CopyToAsync(stream);
-            return new JsonResult(new { path = "/uploads/" + fileName });
-
-        }
+       
     }
 }
