@@ -5,14 +5,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Edit</h1>
 
-<script src="https://cdn.ckeditor.com/ckeditor5/20.0.0/classic/ckeditor.js"></script>
-
-<h4>Materia</h4>
+<h4>Editar Matéria</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-12">
         <form asp-action="Edit" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="MateriaID" />
@@ -37,16 +34,16 @@
                 </label>
             </div>
             <div class="w-100">
-                @Html.TextAreaFor(model => model.Texto, new { @id = "editor" })
+                @Html.TextAreaFor(model => model.Texto, new { @id = "summernote" })
             </div>
 
             <script>
-                ClassicEditor
-                    .create(document.querySelector('#editor'))
+                $('#summernote').summernote({
+                    placeholder: 'Digite seu texto aqui!',
+                    tabsize: 2,
+                    height: 100
+                });
 
-                    .catch(error => {
-                        console.error(error);
-                    });
             </script>
 
             <div class="form-group">
@@ -61,7 +58,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Voltar</a>
 </div>
 
 @section Scripts {

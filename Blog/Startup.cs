@@ -63,7 +63,7 @@ namespace Blog
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Materia}/{action=Index}/{id?}", "{ controller = SendMailer}/{ action = SendEmail}/{ id ?}");
+                    template: "{controller=Materia}/{action=Index}/{id?}");
             });
         }
     }

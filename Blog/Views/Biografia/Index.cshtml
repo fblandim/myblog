@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Blog.Models.Biografia>
+@using Microsoft.AspNetCore.Identity
+@using Blog.Areas.Identity.Data
+@inject SignInManager<AppIdentityUser> SignInManager
+@inject UserManager<AppIdentityUser> UserManager
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+        @foreach (var item in Model)
+        {
+            
+            <!-- Page Content -->
+            <div class="container">
+
+                <div class="row">
+
+                    <!-- Post Content Column -->
+                    <div class="col-lg-8 text-justify">
+
+                        <!-- Title -->
+                        <h1 class="mt-4"> Sobre Mim</h1>
+
+
+
+                        <!-- Post Content -->
+                        <p>@Html.Raw(Html.DisplayTextFor(modelItem => item.Texto))</p>
+
+                        <hr>
+                        <div>
+                            @if (SignInManager.IsSignedIn(User))
+                            {
+                                <a asp-action="Edit" asp-route-id="@item.BiografiaId">Editar</a>
+                            }
+                            <a asp-controller="Materia" asp-action="Index">Voltar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+
+

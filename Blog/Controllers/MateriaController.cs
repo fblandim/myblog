@@ -42,7 +42,7 @@ namespace Blog.Controllers
                 materiasPesquisa = materiasPesquisa.Where(s => s.Texto.Contains(Pesquisa));
             }
 
-            return View(await materiasPesquisa.ToPagedListAsync(Pagina, 2));
+            return View(await materiasPesquisa.ToPagedListAsync(Pagina, 3));
         }
 
         [Authorize]

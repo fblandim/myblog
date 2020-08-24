@@ -37,11 +37,9 @@
         <div class="row">
 
             <!-- Blog Entries Column -->
-            <div class="col-md-8">
+            <div class="col-md-8 my-4">
 
-                <h1 class="my-4">
-                    Publicações
-                </h1>
+
 
 
                 @foreach (var item in Model)
@@ -92,6 +90,7 @@
                 @using (Html.BeginForm("Index", "Materia", FormMethod.Get))
                 {
                     <div class="card my-4">
+
                         <h5 class="card-header">Pesquisar</h5>
                         <div class="card-body">
                             <div class="input-group">
@@ -109,32 +108,38 @@
 
                 <!-- Categories Widget -->
                 <div class="card my-4">
-                    <h5 class="card-header">Categories</h5>
+                    <h5 class="card-header">Redes Sociais</h5>
                     <div class="card-body">
                         <div class="row">
                             <div class="col-lg-6">
                                 <ul class="list-unstyled mb-0">
                                     <li>
-                                        <a href="#">Web Design</a>
+                                        <a href="https://www.linkedin.com/in/flaviolandim/">
+                                            <img src="~/Imagens/linkd.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+                                            Linkedin
+                                        </a>
                                     </li>
-                                    <li>
-                                        <a href="#">HTML</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Freebies</a>
+                                    <li class="pt-2">
+                                        <a href="https://www.facebook.com/landimflavio">
+                                            <img src="~/Imagens/face.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+                                            Facebook
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="col-lg-6">
                                 <ul class="list-unstyled mb-0">
                                     <li>
-                                        <a href="#">JavaScript</a>
+                                        <a href="https://www.instagram.com/flaviolandim.cross/">
+                                            <img src="~/Imagens/insta.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+                                            Instagram
+                                        </a>
                                     </li>
-                                    <li>
-                                        <a href="#">CSS</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Tutorials</a>
+                                    <li class="pt-2">
+                                        <a href="https://twitter.com/flaviolandim">
+                                            <img src="~/Imagens/tt.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+                                            Twitter
+                                        </a>
                                     </li>
                                 </ul>
                             </div>

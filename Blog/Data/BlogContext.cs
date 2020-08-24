@@ -15,5 +15,6 @@ namespace Blog.Data
         }
 
         public DbSet<Materia> Materias { get; set; }
+        public DbSet<Biografia> Biografias { get; set; }
     }
 }

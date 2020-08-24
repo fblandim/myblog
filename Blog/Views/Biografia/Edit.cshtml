@@ -1,0 +1,42 @@
+﻿@model Blog.Models.Biografia
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Editar Biografia</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="BiografiaId" />
+
+
+            <div class="w-100">
+                @Html.TextAreaFor(model => model.Texto, new { @id = "summernote" })
+            </div>
+
+            <script>
+                $('#summernote').summernote({
+                    placeholder: 'Digite seu texto aqui!',
+                    tabsize: 2,
+                    height: 100
+                });
+
+            </script>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

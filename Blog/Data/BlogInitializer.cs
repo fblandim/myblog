@@ -13,19 +13,19 @@ namespace Blog.Data
         {
             context.Database.EnsureCreated();
 
-            if (context.Materias.Any())
+            if (context.Biografias.Any())
             {
                 return;
             }
 
-            var materias = new Materia[]
+            var biografias = new Biografia[]
             {
-                new Materia {Titulo = "Titulo de teste", Texto = "Texto de teste"}
+                new Biografia {Texto = "Biografia de texte"}
             };
 
-            foreach (Materia m in materias)
+            foreach (Biografia m in biografias)
             {
-                context.Materias.Add(m);
+                context.Biografias.Add(m);
             }
             context.SaveChanges();
         }

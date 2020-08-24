@@ -16,6 +16,9 @@ C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\ne
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Blog.dll
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Blog.pdb
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Blog.csproj.CopyComplete
+C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\bin\Debug\netcoreapp2.2\Blog.Views.pdb
+C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Blog.Views.pdb
+C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Blog.csproj.CoreCompileInputs.cache
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\bin\Debug\netcoreapp2.2\appsettings.Development.json
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\bin\Debug\netcoreapp2.2\appsettings.json
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
@@ -36,6 +39,8 @@ C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\ne
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Razor\Views\Materia\Edit.cshtml.g.cs
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Razor\Views\Materia\Index.cshtml.g.cs
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Razor\Views\Materia\MateriaCompleta.cshtml.g.cs
+C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Razor\Views\SendMailer\SendEmail.cshtml.g.cs
+C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Razor\Views\SendMailer\SendOk.cshtml.g.cs
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -44,9 +49,6 @@ C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\ne
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Blog.genruntimeconfig.cache
-C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\bin\Debug\netcoreapp2.2\Blog.Views.pdb
-C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Blog.Views.pdb
-C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Blog.csproj.CoreCompileInputs.cache
-C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Razor\Views\SendMailer\SendEmail.cshtml.g.cs
-C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Razor\Views\SendMailer\SendOk.cshtml.g.cs
+C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Razor\Views\Biografia\Index.cshtml.g.cs
+C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Razor\Views\Biografia\Edit.cshtml.g.cs
 C:\Users\flavi\OneDrive\Documents\Cursos\ASP.NET Core MVC\Blog\Blog\obj\Debug\netcoreapp2.2\Blog.csprojAssemblyReference.cache
